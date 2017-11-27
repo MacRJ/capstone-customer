@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import {Text, View, TouchableHighlight} from 'react-native';
-// import Bill from './bill';
+import Bill from './bill';
 // import Items from './items'
 
 class working extends Component {
@@ -12,20 +12,19 @@ class working extends Component {
 
 
 // Selecting Bill Function
-// selectingBillFunction() {
-//   if(!this.state.billSelected) {
-//     return <TouchableHighlight onPress={() => this.setState({billSelected: true})}>
-//     <View>
-//       <Bill selected={this.state.billSelected}/>
-//     </View>
-//   </TouchableHighlight>
-//
-// } else {
-//     return <View>
-//     <Bill selected={this.state.billSelected} />
-//   </View>
-// }
-// }
+selectingBillFunction() {
+  if(!this.state.billSelected) {
+    return <TouchableHighlight onPress={() => this.setState({billSelected: true})}>
+      <View>
+        <Bill selected={this.state.billSelected}/>
+      </View>
+  </TouchableHighlight>
+} else {
+    return <View>
+      <Bill selected={this.state.billSelected} />
+  </View>
+}
+}
 
 // Selecting Items Function
 // selectingItemsFunction() {

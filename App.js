@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
+import Store from './src/store';
+import {Provider} from 'react-redux'
 import firebase from 'firebase';
 import {Button, Spinner, LoginForm, Header, Main} from './src/components';
 
@@ -40,11 +42,14 @@ renderContent() {
 }
 
   render() {
+    let store = new Store();
     return (
-      <View>
-        <Header headerText="Auth"/>
-        {this.renderContent()}
-      </View>
+      <Provider store={store}>
+        <View>
+          <Header headerText="Auth"/>
+          {this.renderContent()}
+        </View>
+      </Provider>
     );
   };
 };
