@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-// import {connect} from 'react-redux';
-// import {bindActionCreators} from 'redux';
-// import {getAllItems, getType, getPullDown} from '../../actions/actions';
-// import {Item} from './'
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {getAllItems, getType, getPullDown} from '../../../../actions/allActions';
+import Item from './item'
 
 class InternalItems extends Component {
 
 
-// componentDidMount() {
-//   this.props.getAll()
-//   this.props.getPullDown(1)
-// }
+componentDidMount() {
+  this.props.getAll()
+  this.props.getPullDown(1)
+}
 
 // selecting a type
 selectingAType = (id) => {
@@ -54,8 +54,7 @@ render() {
     return (
       <View style={container}>
         <View style = {row}>
-          // {this.barItems()}
-          <Text>Testing</Text>
+          {this.barItems()}
         </View>
       </View>
     )
@@ -79,19 +78,18 @@ const styles = {
     width: 650,
   }
 }
-// function mapStateToProps(state, props) {
-//   return {
-//     items: state.items
-//   }
-// }
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     getAll: bindActionCreators(getAllItems, dispatch),
-//     selectItem: bindActionCreators(getType, dispatch),
-//     getPullDown: bindActionCreators(getPullDown, dispatch)
-//   }
-// }
+function mapStateToProps(state, props) {
+  return {
+    items: state.items
+  }
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    getAll: bindActionCreators(getAllItems, dispatch),
+    selectItem: bindActionCreators(getType, dispatch),
+    getPullDown: bindActionCreators(getPullDown, dispatch)
+  }
+}
 
 
-// export default connect(mapStateToProps, mapDispatchToProps)(InternalItems)
-export default InternalItems
+export default connect(mapStateToProps, mapDispatchToProps)(InternalItems)

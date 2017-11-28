@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-// import {connect} from 'react-redux';
-// import {bindActionCreators} from 'redux';
-// import {getBill} from '../actions/actions';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {getBill} from '../../../actions/allActions';
 import InternalBill from './internalBill'
 
 
@@ -44,12 +44,11 @@ const styles = {
 }
 
 
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     getBill: bindActionCreators(getBill, dispatch)
-//   }
-// }
+function mapDispatchToProps(dispatch) {
+  return {
+    getBill: bindActionCreators(getBill, dispatch)
+  }
+}
 
 
-// export default connect(null, mapDispatchToProps)(Bill)
-export default Bill
+export default connect(null, mapDispatchToProps)(Bill)

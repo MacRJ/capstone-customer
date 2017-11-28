@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Text, View, TouchableHighlight, ScrollView} from 'react-native'
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 import BarItem from './barItem'
 
 class Item extends Component {
@@ -83,13 +83,12 @@ const styles = {
 
   }
 }
-// function mapStateToProps(state, props) {
-//   return {
-//     pulldown: state.pulldown
-//   }
-// }
+function mapStateToProps(state, props) {
+  return {
+    pulldown: state.pulldown
+  }
+}
 
 
 
-// export default connect(mapStateToProps, null)(Item)
-export default Item
+export default connect(mapStateToProps, null)(Item)

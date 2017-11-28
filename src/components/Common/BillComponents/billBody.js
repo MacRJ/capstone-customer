@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
-// import {connect} from 'react-redux';
-// import {bindActionCreators} from 'redux';
-import {Item} from './index'
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import Item from './item'
 
 
 class BillBody extends Component{
