@@ -12,6 +12,8 @@ const Main = () => {
       <Button onPress={() => firebase.auth().signOut()}>
         Log out
       </Button>
+
+      <Text>Testing</Text>
     </View>
   )
 }

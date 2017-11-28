@@ -52,7 +52,7 @@ class Item extends Component {
     return (
       <View>
         <Text>Testing</Text>
-        // {this.selecting()}
+        {this.selecting()}
       </View>
 
       )
