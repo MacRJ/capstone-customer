@@ -12,13 +12,14 @@ const Items = (props) =>  {
 
 const styles = {
   selectedStyle: {
-    height: 50,
-    width: 650,
+    height: 500,
+    width: 400,
     borderColor: 'black',
     borderWidth: 1,
     borderRadius: 15,
     borderColor: '#ddd',
     backgroundColor: 'white',
+    marginTop: 150
   },
   not_selected: {
     height: 100,
