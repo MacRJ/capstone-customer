@@ -1,10 +1,11 @@
 import axios from 'axios'
+import config from '../src/app.config'
 
 
 export const getBill = () => {
   return {
     type: 'GET_BILL',
-    payload: axios.get('https://murmuring-tundra-40675.herokuapp.com/bill')
+    payload: axios.get(`${config.base_url}/bill`)
   }
 }
 // {getAllItems, getType, getPullDown}
@@ -13,26 +14,26 @@ export const getBill = () => {
 export const getAllItems = () => {
   return {
     type: 'GET_ALL_ITEMS',
-    payload: axios.get('https://murmuring-tundra-40675.herokuapp.com/items')
+    payload: axios.get(`${config.base_url}/items`)
   }
 }
 // selecting a type of items
 export const getType = (id) => {
   return {
     type: 'GET_TYPE',
-    payload: axios.post(`https://murmuring-tundra-40675.herokuapp.com/items/select/${id} `)
+    payload: axios.post(`${config.base_url}/items/select/${id}`)
   }
 }
 // PullDown Menu
 export const getPullDown = (id) => {
   return {
     type: 'GET_PULLDOWN',
-    payload: axios.get(`https://murmuring-tundra-40675.herokuapp.com/items/item/${id}`)
+    payload: axios.get(`${config.base_url}/items/item/${id}`)
   }
 }
-export const addDrink = (id) => {
+export const addDrink = (id, cust) => {
   return {
     type: 'ADD_DRINK',
-    payload: axios.post(`https://murmuring-tundra-40675.herokuapp.com/bill/add/${id}`)
+    payload: axios.post(`${config.base_url}/bill/add/${id}/${cust}`)
   }
 }

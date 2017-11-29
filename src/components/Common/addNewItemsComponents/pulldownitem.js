@@ -8,7 +8,7 @@ class PullDownItem extends Component {
     render() {
     const {item} = styles
     return (
-      <TouchableHighlight onPress={() => this.props.addDrink(this.props.item.id)}>
+      <TouchableHighlight onPress={() => this.props.addDrink(this.props.item.id, 5)}>
         <Text style={item}>{this.props.item.name}</Text>
       </TouchableHighlight>
     )
