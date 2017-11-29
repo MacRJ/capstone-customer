@@ -8,10 +8,8 @@ class PullDownItem extends Component {
     render() {
     const {item} = styles
     return (
-      <TouchableHighlight
-        style={item}
-        onPress={() => this.props.addDrink(this.props.item.id)}>
-        <Text>{this.props.item.name}</Text>
+      <TouchableHighlight onPress={() => this.props.addDrink(this.props.item.id)}>
+        <Text style={item}>{this.props.item.name}</Text>
       </TouchableHighlight>
     )
   }
@@ -32,8 +30,7 @@ const styles = {
     marginRight: 5,
     marginTop: 10,
     height: 50,
-    justifyContent: 'space-around',
-    flexDirection: ''
+    justifyContent: 'space-around'
   }
 }
 function mapDispatchToProps(dispatch) {

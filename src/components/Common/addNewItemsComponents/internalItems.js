@@ -62,22 +62,9 @@ class InternalItems extends Component {
     const {container, row, items, carWrapper} = styles
       return (
         <View style={container}>
-          <View syle={carWrapper}>
-            <Carousel
-              width={520}
-              height={175}
-              delay={2000}
-              indicatorAtBottom={false}
-              indicatorSize={20}
-              indicatorText="*"
-              indicatorCorlor="red"
-              loop= {false}
-              animate={true}
-              hideIndicators={false}
-              >
+          <ScrollView horizontal={true}>
               {this.barItems()}
-            </Carousel>
-        </View>
+          </ScrollView>
         <View style={items}>
           <ScrollView>
             {this.getPulldownItems()}
@@ -90,11 +77,11 @@ class InternalItems extends Component {
 
   const styles = {
     container: {
+      flex: 1,
       flexDirection: 'column',
-      width: 640,
+      width: 390,
       height: 650,
-      flexWrap: 'wrap',
-      backgroundColor: 'red'
+      flexWrap: 'wrap'
     },
     carWrapper: {
       flex:1,
@@ -102,13 +89,13 @@ class InternalItems extends Component {
       alignItems: 'center'
     },
     row: {
+      horizontal: true,
       flexDirection: 'row',
       flex: 1,
       width: 550,
       flexWrap: 'wrap',
       height: 175,
-      width: 650,
-      overflow: 'hidden'
+      width: 650
     },
     items: {
       flex: 1,

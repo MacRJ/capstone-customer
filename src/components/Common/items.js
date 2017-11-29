@@ -15,7 +15,7 @@ const styles = {
     height: 500,
     width: 400,
     borderColor: 'black',
-    borderWidth: 1,
+    borderWidth: 5,
     borderRadius: 15,
     borderColor: '#ddd',
     backgroundColor: 'white',
@@ -25,11 +25,12 @@ const styles = {
     height: 100,
     width: 650,
     borderColor: 'black',
-    borderWidth: 1,
+    borderWidth: 5,
     borderRadius: 15,
     borderColor: '#ddd',
-    backgroundColor: 'white',
-    opacity: .1,
+    backgroundColor: 'black',
+    opacity: 0,
+    marginTop: 500
   }
 }
 
