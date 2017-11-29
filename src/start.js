@@ -30,7 +30,6 @@ renderContent() {
     case true:
       return (
         <Main />
-
         );
     case false:
       return <LoginForm />
@@ -42,7 +41,6 @@ renderContent() {
   render() {
     return (
         <View>
-          <Header headerText="Auth"/>
           {this.renderContent()}
         </View>
     );

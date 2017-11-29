@@ -6,7 +6,7 @@ import Items from './items'
 
 class working extends Component {
  state = {
-   billSelected: false,
+   billSelected: true,
  }
 
 
@@ -45,9 +45,7 @@ selectingItemsFunction() {
   render() {
   return (
     <View>
-      <Text>Hello</Text>
       {this.selectingBillFunction()}
-      {this.selectingItemsFunction()}
     </View>
     );
   }

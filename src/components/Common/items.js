@@ -12,7 +12,7 @@ const Items = (props) =>  {
 
 const styles = {
   selectedStyle: {
-    height: 550,
+    height: 50,
     width: 650,
     borderColor: 'black',
     borderWidth: 1,

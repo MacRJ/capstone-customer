@@ -51,7 +51,6 @@ class Item extends Component {
   render() {
     return (
       <View>
-        <Text>Testing</Text>
         {this.selecting()}
       </View>
 

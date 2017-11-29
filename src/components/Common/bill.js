@@ -33,8 +33,8 @@ const styles = {
     opacity: .1,
   } ,
   selectedStyle: {
-    height: 550,
-    width: 650,
+    height: 500,
+    width: 400,
     borderColor: 'black',
     borderWidth: 1,
     borderRadius: 15,
