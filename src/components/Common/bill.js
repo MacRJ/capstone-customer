@@ -23,14 +23,14 @@ componentDidMount() {
 
 const styles = {
   not_selected: {
-    height: 100,
+    height: 200,
     width: 650,
     borderColor: 'black',
     borderWidth: 5,
     borderRadius: 15,
     borderColor: '#ddd',
     backgroundColor: 'black',
-    opacity: 0,
+    opacity: .2,
   } ,
   selectedStyle: {
     height: 500,

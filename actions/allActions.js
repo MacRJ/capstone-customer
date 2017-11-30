@@ -31,9 +31,9 @@ export const getPullDown = (id) => {
     payload: axios.get(`${config.base_url}/items/item/${id}`)
   }
 }
-export const addDrink = (id, cust) => {
+export const addDrink = (id) => {
   return {
     type: 'ADD_DRINK',
-    payload: axios.post(`${config.base_url}/bill/add/${id}/${cust}`)
+    payload: axios.post(`${config.base_url}/bill/cust/5/${id}`)
   }
 }

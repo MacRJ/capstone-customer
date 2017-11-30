@@ -41,16 +41,19 @@ class InternalItems extends Component {
     }
     // Mapping funciton for Item
     return filtering.map((item, i) => {
+      const icons = ["http://i1044.photobucket.com/albums/b448/rmacwj2/020-jar-of-beer_zps3ednecd5.png", "http://i1044.photobucket.com/albums/b448/rmacwj2/018-beer-pint_zps1gckjhij.png", "http://i1044.photobucket.com/albums/b448/rmacwj2/019-martini-glass_zpsemcroy8i.png"]
         return item.selected ? <Item
             key={item.id}
             item={item}
             selecting={this.selectingAType}
             selected = {true}
+            icon = {icons[i]}
             /> : <Item
                     key={item.id}
                     item={item}
                     selecting={this.selectingAType}
                     selected = {false}
+                    icon = {icons[i]}
                     />
 
       })
@@ -62,7 +65,7 @@ class InternalItems extends Component {
     const {container, row, items, carWrapper} = styles
       return (
         <View style={container}>
-          <ScrollView horizontal={true}>
+          <ScrollView horizontal={true} style={{flex: .20}}>
               {this.barItems()}
           </ScrollView>
         <View style={items}>
@@ -98,7 +101,7 @@ class InternalItems extends Component {
       width: 650
     },
     items: {
-      flex: 1,
+      flex: .80,
       // backgroundColor: 'red'
     }
   }

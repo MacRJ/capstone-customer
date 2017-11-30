@@ -44,7 +44,7 @@ selectingItemsFunction() {
 
   render() {
   return (
-    <View>
+    <View style={{backgroundColor: 'black'}}>
       {this.selectingBillFunction()}
       {this.selectingItemsFunction()}
     </View>
